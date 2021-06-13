@@ -1,0 +1,17 @@
+<!-- 이 파일은 iframe의 보안성에 관한 배워볼 수 있는 문서로,
+해당 문서를 열고, 개발자도구로 살펴보면, MDN의 해당 페이지를 embed하려는 시도는 차단되어있음(it set 'X-Frame-Options' to 'deny'을 알 수 있다. -->
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <title>Iframe with basic details</title>
+  </head>
+  <body>
+    <h1>Iframe with basic details</h1>
+
+    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="100%" height="500" frameborder="0" allowfullscreen sandbox>
+      <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary"> Fallback link for browsers that don't support iframes </a> </p>
+    </iframe>
+  </body>
+</html>
