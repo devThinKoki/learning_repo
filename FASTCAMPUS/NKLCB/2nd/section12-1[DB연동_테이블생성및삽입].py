@@ -19,7 +19,7 @@ print('sqlite3.sqlite_version', sqlite3.sqlite_version)
 # DB생성 & Autocommit # 영구적으로 반영시키기 위해서는 commit해야함.
 # 
 # 본인 DB 파일 경로
-conn = sqlite3.connect('./2nd/sec12_DB/database.db', isolation_level=None)
+conn = sqlite3.connect(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec12_DB/database.db', isolation_level=None)
 
 # DB생성(메모리)
 # conn = sqlite3.connect(":memory:")
@@ -48,7 +48,6 @@ c.executemany("INSERT INTO users(id, username, email, phone, website, regdate) V
 
 # 테이블 데이터 삭제
 # print("users db deleted : ", conn.execute("delete from users").rowcount, "rows")
-
 # 커밋 : isolation_level=None 일 경우 자동 반영(Auto Commit)
 conn.commit()
 

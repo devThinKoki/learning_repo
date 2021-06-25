@@ -7,7 +7,7 @@
 import csv
 
 # 예제1
-with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resource/sample1.csv', 'r') as f:
+with open(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec11_[csv]_resource/sample1.csv', 'r') as f:
     reader = csv.reader(f)
     # next(reader) Header 스킵: 가장 상위 컬럼(행)을 읽는 것을 스킵함
     # 확인 
@@ -18,9 +18,9 @@ with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resour
 
     for c in reader:
         print(c)
-
+print()
 # 예제2
-with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resource/sample2.csv', 'r') as f:
+with open(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec11_[csv]_resource/sample2.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')  # 구분자로 '|'을 선택
     # next(reader) Header 스킵: 가장 상위 컬럼(행)을 읽는 것을 스킵함
     # 확인
@@ -31,9 +31,9 @@ with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resour
 
     for c in reader:
         print(c)
-
+print()
 # 예제3 (Dict 변환)
-with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resource/sample1.csv', 'r') as f:
+with open(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec11_[csv]_resource/sample1.csv', 'r') as f:
     reader = csv.DictReader(f)
     # 확인
     print(reader)
@@ -45,11 +45,11 @@ with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resour
         for k, v in c.items():
             print(k, v)
         print('-----')
-
+print('EX-4')
 # 예제4
 w = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]]
 
-with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resource/sample3.csv', 'w', newline='') as f:  # newline='' 테스트
+with open(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec11_[csv]_resource/sample3.csv', 'w', newline='') as f:  # newline='' 테스트
     wt = csv.writer(f)
     # dir 확인
     print(dir(wt))
@@ -58,7 +58,7 @@ with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resour
         wt.writerow(v) # 한 줄 한 줄 검사하고 써야 할 경우
 
 # 예제5
-with open(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resource/sample3.csv', 'w', newline='') as f:
+with open(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec11_[csv]_resource/sample3.csv', 'w', newline='') as f:
     wt = csv.writer(f)
     # dir 확인
     print(dir(wt))
@@ -83,7 +83,7 @@ import pandas as pd
 # sheetname='시트명' 또는 숫자, header=숫자, skiprow=숫자 등의 attribute를 갖는다.
 # sheetname='시트명' 또는 숫자, header=3, skiprow=1 실습
 import os
-xlsx = pd.read_excel('./2nd/sec11_[csv]_resource/sample.xlsx')
+xlsx = pd.read_excel(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec11_[csv]_resource\sample.xlsx')
 # 상위 데이터 확인
 print(xlsx.head())# head(): 위에서 5개(default값)row만을 출력
 print()
@@ -97,5 +97,5 @@ print(xlsx.shape) # shape(): 행, 열의 개수를 튜플로 반환
 
 
 # 엑셀 or CSV 다시 쓰기
-xlsx.to_excel('./2nd/sec11_[csv]_resource/result.xlsx', index=False)
-xlsx.to_csv(r'D:\LocalServer\learning_repo\FASTCAMPUS\NKLCB\2nd\sec11_[csv]_resource/result.csv', index=False)
+xlsx.to_excel(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd\sec11_[csv]_resource/result.xlsx', index=False)
+xlsx.to_csv(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd\sec11_[csv]_resource/result.csv', index=False)

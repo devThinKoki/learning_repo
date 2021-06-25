@@ -5,7 +5,7 @@
 import sqlite3
 
 # DB 파일 조회(없으면 새로 생성)
-conn = sqlite3.connect('./2nd/sec12_DB/database.db')  # 본인 DB 파일 경로
+conn = sqlite3.connect(r'D:/LocalServer/learning_repo/FASTCAMPUS/NKLCB/2nd/sec12_DB/database.db')  # 본인 DB 파일 경로
 
 # 커서 바인딩
 c = conn.cursor()
@@ -70,9 +70,9 @@ print('param5', c.fetchall())
 c.execute("SELECT * FROM users WHERE id= :id1 OR id= :id2", {"id1": 1, "id2": 4})
 print('param6', c.fetchall())
 
-with conn:
-    # Dump 출력(데이터베이스 백업 시 중요)
-    with open('본인이 원하는 경로/dump.sql', 'w') as f:
-        for line in conn.iterdump():
-            f.write('%s\n' % line)
-        print('Dump Print Complete.')
+# with conn:
+#     # Dump 출력(데이터베이스 백업 시 중요)
+#     with open('본인이 원하는 경로/dump.sql', 'w') as f:
+#         for line in conn.iterdump():
+#             f.write('%s\n' % line)
+#         print('Dump Print Complete.')

@@ -5,7 +5,7 @@
 import sqlite3
 
 # DB생성(파일)
-conn = sqlite3.connect('본인이 원하는 경로/database.db/database.db')
+conn = sqlite3.connect('본인이 원하는 경로/database.db')
 
 # Cursor연결
 c = conn.cursor()
