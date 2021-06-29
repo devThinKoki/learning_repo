@@ -72,8 +72,8 @@
         # It should also be possible to log out of the account and exit the program.
 # Write your code here
 import random
-from classCard import Card, is_unique, create_card, ask_info, check_valid
-from menuControl import show_and_select_main_menu, show_and_select_sub_menu
+from Card import Card, is_unique, create_card, ask_info, check_valid
+from user import show_and_select_main_menu, show_and_select_sub_menu
 
 # 프로그램이 종료될 때까지 생성된 모든 Card객체를 담는 배열
 all_cards = []

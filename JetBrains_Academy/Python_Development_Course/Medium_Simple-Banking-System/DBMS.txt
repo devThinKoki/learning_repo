@@ -1,0 +1,8 @@
+With database you can do:
+    Store, retrieve and update data
+    Get metadata and data dictionaries
+    Access database remotely
+    Restrict accesses to data
+    Make concurrent updates
+    Recover to some point in time
+    Check the rules for data consistency automatically
