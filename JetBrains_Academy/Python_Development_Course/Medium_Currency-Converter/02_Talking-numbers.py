@@ -1,0 +1,5 @@
+# print("Meet a conicoin!")
+conicoin = input()
+print(f"I have {conicoin} conicoins.")
+print(f"{conicoin} conicoins cost {int(conicoin) * 100} dollars.")
+print("I am rich! Yippee!")
